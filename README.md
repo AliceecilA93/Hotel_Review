@@ -10,7 +10,8 @@
    
 코드     | 코드 링크   | 
 :-------:|:-----------:|
-야놀자 크롤링|[Crawling_Yanolja](https://github.com/AliceecilA93/Hotel_Review/blob/main/Crawling/Crawling_Yanolja.ipynb)|       여기어때 크롤링 | [Crawling_Good choice](https://github.com/AliceecilA93/Hotel_Review/blob/main/Crawling/Crawling_Good%20choice.ipynb)|
+야놀자 크롤링|[Crawling_Yanolja](https://github.com/AliceecilA93/Hotel_Review/blob/main/Crawling/Crawling_Yanolja.ipynb)|      
+여기어때 크롤링 | [Crawling_Good choice](https://github.com/AliceecilA93/Hotel_Review/blob/main/Crawling/Crawling_Good%20choice.ipynb)|
 데일리호텔 크롤링| [Crawling_Daily hotel](https://github.com/AliceecilA93/Hotel_Review/blob/main/Crawling/Crawling_Daily%20hotel.ipynb)| 
 주소 기반 호텔이름 통일화| [Unified hotel name based on address](https://github.com/AliceecilA93/Hotel_Review/blob/main/Crawling/Unified%20hotel%20name%20based%20on%20address.ipynb) |
 키워드 기반 Wordcloud| [Detection keyword_Word cloud](https://github.com/AliceecilA93/Hotel_Review/blob/main/Data%20visualization/Detection%20keyword%20_%20Word%20cloud.ipynb)|
@@ -68,7 +69,7 @@ def text_cleaning(text):
  All-review| 222,483 |         
 
 
- 4. 라벨별 리뷰 카운팅 : 라벨간 키워드 수 불균형으로 인한 형평성 문제를 해결하기위함. 
+ 4. 라벨별 리뷰 카운팅 : 라벨간 키워드 수 불균형으로 인한 형평성 문제를 해결하기위함
 
 ```c
 for i in tqdm(range(len(review))):
@@ -84,20 +85,20 @@ for i in tqdm(range(len(review))):
  
  5. N-gram
 
-N-gram
   
-    Topic 1: [('직원 친절하다', 2662.14), ('깨끗하다 직원', 932.96), ('공항 근처', 905.05), ('깔끔하다 친절하다', 542.43), ('직원 친절', 481.67), ('깔끔하다 직원', 412.25), ('깨끗하다 조식', 378.55)]​
+  
+        Topic 1: [('직원 친절하다', 2662.14), ('깨끗하다 직원', 932.96), ('공항 근처', 905.05), ('깔끔하다 친절하다', 542.43), ('직원 친절', 481.67), ('깔끔하다 직원', 412.25), ('깨끗하다 조식', 378.55)]​
 
-    Topic 2: [('공항 가깝다', 2335.91), ('깨끗하다 친절하다', 1415.67), ('시설 깨끗하다', 1056.14), ('룸 컨디션', 719.42), ('넓다 깨끗하다', 647.12), ('깨끗하다 위치', 526.76), ('직원 친절하다', 476.97)]​
+        Topic 2: [('공항 가깝다', 2335.91), ('깨끗하다 친절하다', 1415.67), ('시설 깨끗하다', 1056.14), ('룸 컨디션', 719.42), ('넓다 깨끗하다', 647.12), ('깨끗하다 위치', 526.76), ('직원 친절하다', 476.97)]​
 
-    Topic 3: [('조식 맛있다', 734.27), ('시설 깔끔하다', 535.28), ('시장 가깝다', 398.12), ('없다 아쉽다', 373.78), ('깨끗하다 뷰', 328.57), ('깨끗하다 공항', 325.03), ('침대 푹신하다', 317.3)]​
+        Topic 3: [('조식 맛있다', 734.27), ('시설 깔끔하다', 535.28), ('시장 가깝다', 398.12), ('없다 아쉽다', 373.78), ('깨끗하다 뷰', 328.57), ('깨끗하다 공항', 325.03), ('침대 푹신하다', 317.3)]​
 
-    Topic 4: [('오션 뷰', 1056.61), ('깨끗하다 조용하다', 668.41), ('깨끗하다 넓다', 580.01), ('바다 뷰', 539.31), ('깨끗하다 시설', 526.14), ('친절하다 깔끔하다', 449.91), ('조용하다 깨끗하다', 316.41)]​
+        Topic 4: [('오션 뷰', 1056.61), ('깨끗하다 조용하다', 668.41), ('깨끗하다 넓다', 580.01), ('바다 뷰', 539.31), ('깨끗하다 시설', 526.14), ('친절하다 깔끔하다', 449.91), ('조용하다 깨끗하다', 316.41)]​
 
-    Topic 5: [('가격 대비', 2827.31), ('침구 깨끗하다', 1694.38), ('친절하다 깨끗하다', 1221.99), ('직원 친절하다', 739.62), ('저렴하다 가격', 536.66), ('위치 시설', 475.68), ('가격 저렴하다', 421.98)]
+        Topic 5: [('가격 대비', 2827.31), ('침구 깨끗하다', 1694.38), ('친절하다 깨끗하다', 1221.99), ('직원 친절하다', 739.62), ('저렴하다 가격', 536.66), ('위치 시설', 475.68), ('가격 저렴하다', 421.98)]
 
 
-==> N-gram으로는 라벨별 키워드를 확인할 수가 없고 전체 리뷰에 어떤 내용(Topic)들이 많은지만 알려줘서 트렌드 분석이 어렵다고 판단. 
+==> N-gram으로는 라벨별 키워드를 확인할 수가 없고 전체 리뷰에 어떤 내용(Topic)들이 많은지만 알려줘서 트렌드 분석이 어렵다고 판단
 
 
 
